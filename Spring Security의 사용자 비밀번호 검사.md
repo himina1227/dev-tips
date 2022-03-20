@@ -8,7 +8,7 @@
 
 ## DaoAuthenticationProvider
 
-컨트롤러에서 `AuthenticationManager.authenticate(Authentication)`을 호출하면 스프링 시큐리티에 내장된 AuthenticationProvider의 `authenticate()` 메서드가 호출되는데, 이 중에서 `DaoAuthenticationProvider.additionalAuthenticationChekcs(UserDetails, UsernamePasswordAuthenticationToken)` 메서드에 다음과 같은 코드가 있다.
+컨트롤러에서 `AuthenticationManager.authenticate(Authentication)`을 호출하면 스프링 시큐리티에 내장된 AuthenticationProvider의 `authenticate()` 메서드가 호출되는데, 이 중에서 `DaoAuthenticationProvider.additionalAuthenticationChecks(UserDetails, UsernamePasswordAuthenticationToken)` 메서드에 다음과 같은 코드가 있다.
 
 ```java
     String presentedPassword = authentication.getCredentials().toString();
